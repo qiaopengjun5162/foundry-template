@@ -86,6 +86,16 @@ git cliff --output CHANGELOG.md
 
 ## Usage
 
+Title: Initialize Foundry Project
+
+Description: This set of commands creates a new directory named `my-project`, navigates into that directory, and then initializes a new Foundry project using a custom template from the specified GitHub repository.
+
+```bash
+mkdir my-project
+cd my-project/
+forge init --template https://github.com/qiaopengjun5162/foundry-template
+```
+
 ### Build the Project
 
 To build the project, run the following command:
