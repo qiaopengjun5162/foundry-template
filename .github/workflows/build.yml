@@ -33,6 +33,12 @@ jobs:
         with:
           version: nightly
 
+      - name: Show the Foundry CI config
+        run: forge config
+        env:
+          FOUNDRY_PROFILE: ci
+          FOUNDRY_DISABLE_NIGHTLY_WARNING: "1"
+
       - name: Install deps
         run: forge install
 
@@ -41,6 +47,9 @@ jobs:
           forge --version
           forge build --sizes
         id: build
+        env:
+          FOUNDRY_PROFILE: default
+          FOUNDRY_DISABLE_NIGHTLY_WARNING: "1"
 
       - name: Run Forge fmt
         run: |
