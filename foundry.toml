@@ -6,6 +6,12 @@ solc = "0.8.20"
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
 optimizer = true
 optimizer_runs = 200
+build_info = true
+extra_output = ["storageLayout"]
+fs_permissions = [{ access = "read-write", path = "./" }]
+gas_reports = ["*"]
+via_ir = true
+evm_version = "cancun"
 
 [rpc_endpoints]
 sepolia = "${SEPOLIA_RPC_URL}"
